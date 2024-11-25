@@ -6,6 +6,7 @@
 
 
 main(){
+	int shmid;
 	char	*ptr, *pData;
 	int		*pInt;
 
