@@ -1,0 +1,25 @@
+
+synchronization2
+
+1.이전 시간 복습
+- multi thread programming은 synchronization 해결 방법이 필요하다
+
+- synchronization 해결 방법 4가지
+ - semaphore (이전 시간 학습)
+ - mutex lock 
+ - condition variable
+ - monitor 
+
+2. Dining philosopher (dining.c)
+- 5명의 철학자 원탁에 둘러 앉아 있고, 철학자 양옆에는 젓가락이 하나씩 총 5개가 있다
+- 식사를 하기 위해서 2개의 젓가락을 들어야 하는데, 5명의 철학자 모두 왼쪽(오른쪽)에 있는 젓가락을 
+든다면 교착 상태 (dead lock)에 빠지게 된다 
+
+- 해결방법 (dining2.c)
+ - 공유자원을 젓가락이 아닌 철학자의 상태로 보자
+ - 철하갖
+
+
+ - semaphore와 conditional variable
+ - singnal을 할 때 smaphore의 값이 변한다 (wait하는 프로세스)
+ - signal은 wait하고 있는 프로게스가 없으면 
