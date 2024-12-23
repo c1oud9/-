@@ -196,7 +196,7 @@ main()
 		}
 	}
 
-	for (i = 0 ; i < NUM_MEN ; i++)  {	){ // mutex 삭제, 
+	for (i = 0 ; i < NUM_MEN ; i++)  {  // mutex 삭제, 
 		if (sem_destroy(&Mutex) < 0)  {
 			perror("sem_destroy");
 		}

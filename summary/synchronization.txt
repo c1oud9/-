@@ -1,0 +1,51 @@
+
+
+Multi thread = synchronizatoin
+- mutex lock
+- condition variable
+- monitor – 자바만 쓴다
+- 프로세스 간 동기화는 시스템5 , 스레드 간 posix(더 직관적)
+Dining philosopher
+- i가 철학자 id, 스레드가 5마디
+- 젓가락 shared data
+- 데드락
+- 전부 왼쪽 젓가락만 들고 기다리는 상태
+- 개발할 때는 데드락 상황 자체가 없어야 된다
+- 해결책 : prevention , avoidance(주기 전에 확인하고 할당), dectectoin and recovery(주기적으로 검사하고 걸리면 이전 상태로 복구), 
+ignorance(현재 운영체제가 채택, 왜냐하면 오버헤드가 크다)
+데드락의 필요조건 4가지 중 하나만 봉쇄해도 수학적으로 예방
+- mutual exclusion (없앨 수가 없다, 애초에 shared data는 exclusive하게 사용)
+- hold and wait (알고리즘으로 해결가능)
+- no preemption (자원을 못 쓰면 내려놓는다)
+- circular wait (알고리즘 해결하기 어려움)
+조건을 만족한다 해서 무조건 발생하지는 않음, non deterministic
+두 번째 방법  – 동시에 잡으면 된다, shared data를 젓가락이 아닌 상태로 지정
+Starvation 가능성은 여전히 있음
+- 1번 철학자가 배고픈데 0번 철학자랑 2번 철학자가 같이 먹으면 굶어야 돼
+0번 철학자랑 2번철학자가 번갈아 가면서 먹으면??
+이런 상황까지 대비해서 코드를 짜야 함
+Dining.c를 365일 돌리면 언젠가는 deadlock이 발생함
+
+Mutexes
+- pthread library에서 지원
+- mutex_init으로 unlock 상태로 
+- binary semaphore는 디폴트가 1
+- trylock은 lock이 안 걸려있으면 걸고 아니면 fail
+
+Conditional variable p26
+- mutex lock과 unlock 사이에 기다리는 코드를 넣지 않으면 안 돌아가는 코드가 존재
+- wait는 condition이 만족되면 lock이 열리는 
+- signal은 condtion을 깨워주는 역할
+- broadcast는 wait하는 모든 애들을 깨워주는 역할
+Exercise
+- bounded buffer 
+- mutex와conditional variable가 좀더 직관적 
+들어갈 때 lock, 나갈 때 ㅕㅟ채ㅏ
+- condition이 발생하면 signal로 깨워줘야
+- not_ full 꽊 찼으면 꽉 안 찰 때까지 기다림
+
+
+
+ 
+
+

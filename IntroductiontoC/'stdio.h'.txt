@@ -1,5 +1,0 @@
-
-https://en.cppreference.com/w/cpp/header/cstdio 
-
-stdio -> standard input and output library
-- 

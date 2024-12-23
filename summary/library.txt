@@ -1,0 +1,64 @@
+
+1. stdio.h
+- 입출력의 기본 도구상자. 
+- 프로그램이 데이터를 읽고 쓰는 데 필요한 기본적인 도구들을 제공
+- 키보드로부터 입력을 받거나 화면에 데이터를 출력
+
+2. stdlib.h
+- C 언어의 표준 라이브러리 중 하나
+- 다양한 일반적인 프로그래밍 작업을 수행하는 함수들을 제공
+	1.	메모리 관리
+	•	malloc(), calloc(): 동적으로 메모리를 할당합니다.
+	•	free(): 할당된 메모리를 해제합니다.
+	•	realloc(): 이미 할당된 메모리의 크기를 조정합니다.
+	2.	문자열 변환
+	•	atoi(), atol(), atof(): 문자열을 정수나 실수로 변환합니다.
+	•	strtol(), strtod(): 더 안전한 문자열 변환 함수입니다.
+	3.	난수 생성
+	•	rand(): 의사 난수를 생성합니다.
+	•	srand(): 난수 생성기의 시드를 설정합니다.
+	4.	정렬과 검색
+	•	qsort(): 배열을 정렬합니다.
+	•	bsearch(): 정렬된 배열에서 이진 검색을 수행합니다.
+	5.	프로그램 제어
+	•	exit(): 프로그램을 종료합니다.
+	•	abort(): 프로그램을 비정상 종료합니다.
+	•	system(): 시스템 명령을 실행합니다.
+	6.	환경 관련
+	•	getenv(): 환경 변수의 값을 얻습니다.
+
+3. unistd.h
+- UNIX 표준 라이브러리의 일부
+- UNIX 계열 운영 체제에서 사용되는 시스템 콜과
+  기타 운영 체제 관련 함수들을 제공
+ fork(), exec(), exit()
+ read(), write(), open(), close()
+ getpid(), getuid()
+ sleep()
+
+4. pthread.h
+- POSIX 스레드를 위한 라이브러리
+- 멀티스레딩 프로그래밍을 위한 표준화된 인터페이스를 제공
+    1.	스레드 생성 및 관리
+	•	pthread_create(): 새 스레드를 생성합니다.
+	•	pthread_join(): 스레드의 종료를 기다립니다.
+	•	pthread_exit(): 현재 스레드를 종료합니다.
+	2.	동기화 메커니즘
+	•	pthread_mutex_init(), pthread_mutex_lock(), pthread_mutex_unlock(): 뮤텍스를 통한 상호 배제를 제공합니다.
+	•	pthread_cond_wait(), pthread_cond_signal(): 조건 변수를 통한 스레드 간 통신을 지원합니다.
+	3.	스레드 속성 설정
+	•	pthread_attr_init(), pthread_attr_setdetachstate(): 스레드의 속성을 설정합니다.
+	4.	스레드 식별
+	•	pthread_self(): 현재 스레드의 ID를 반환합니다
+
+5. sys/time.h
+- UNIX 계열 운영 체제에서 시간 관련 기능을 제공하는 라이브러리
+- 고해상도 시간 측정과 타이머 조작에 사용
+	1.	시간 구조체
+	•	struct timeval: 초와 마이크로초 단위의 시간을 표현합니다.
+	•	struct timezone: 시간대 정보를 저장합니다.
+	2.	시간 측정 함수
+	•	gettimeofday(): 현재 시간을 마이크로초 단위까지 정확하게 가져옵니다.
+	3.	타이머 설정
+	•	setitimer(): 주기적인 타이머 인터럽트를 설정합니다.
+	•	getitimer(): 현재 타이머 설정을 확인합니다.
