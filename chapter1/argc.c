@@ -1,7 +1,8 @@
 #include <stdio.h>
 // stdio.h는 printf 함수를 제공한다.
 
-main(int argc, char *argv[])
+
+int main(int argc, char *argv[])
 {
 	int		i;
 

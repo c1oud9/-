@@ -2,7 +2,7 @@ CC = gcc // 컴파일러는 gcc를 사용한다
 CFLAGS = // 컴파일 옵션은 없다
 LDFLAGS = // 링크 옵션은 없다
 
-.SUFFIXES : .c .o // .c 파일을 .o 파일로 컴파일한다
+.SUFFIXES : 
 .c .o :
 	$(CC) -c $(CFLAGS) $<
 // .c 파일을 .o 파일로 컴파일하는 규칙을 정의한다
