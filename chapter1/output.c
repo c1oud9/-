@@ -3,8 +3,7 @@
 // stdio.h는 printf, putchar, puts 함수를 제공한다.
 
 
-main()
-{
+int main(){
 	char c = 'a', s[] = "hello";
 	int i = 100; long l = 99999;
 	float f = 3.14; double d = 99.999;
@@ -16,3 +15,5 @@ main()
 	putchar(c);
 	puts(s);
 }
+
+// putchar과 puts 함수는 각각 문자와 문자열을 출력하는 함수이다.

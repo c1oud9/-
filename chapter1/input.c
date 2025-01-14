@@ -4,7 +4,7 @@
 // stdio.h는 printf, scanf, getchar, putchar, gets, puts 함수를 제공한다.
 
 
-main()
+int main()
 {
 	char c, s[80];
 	int i; long l;
@@ -22,4 +22,4 @@ main()
 	gets(s);
 	puts(s);
 }
-
+// getchar 함수는 문자를 입력받는 함수, gets 함수는 문자열을 입력받는 함수이다
